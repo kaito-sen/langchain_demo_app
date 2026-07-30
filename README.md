@@ -1,4 +1,4 @@
-# LangGraph Fundamentals
+# LangGraph Fundamentals .
 
 Dự án demo cơ bản về **LangGraph** — framework xây dựng ứng dụng AI theo dạng đồ thị trạng thái (StateGraph).
 
@@ -394,5 +394,6 @@ npm start
 - [LangChain Documentation](https://python.langchain.com/docs/)
 - [OpenRouter API](https://openrouter.ai/docs)
 - [Annotation API](https://langchain-ai.github.io/langgraph/reference/annotation/)
-#   l a n g c h a i n _ d e m o _ a p p  
+#   l a n g c h a i n _ d e m o _ a p p 
+ 
  
