@@ -1,17 +1,17 @@
 import "dotenv/config";
-
-import { graph } from "./graph.js";
+import { env } from "./config/env.js";
+import { buildServer } from "./server/app.js";
 
 async function main() {
-  const result = await graph.invoke({
-    topic: "Lịch sử phát triển của trí tuệ nhân tạo",
-    content: "",
-    reviewed_content: "",
-    final_output: "",
-  });
+  const app = await buildServer();
 
-  console.log("=== KẾT QUẢ ===");
-  console.log(result.final_output);
+  try {
+    await app.listen({ port: env.PORT, host: "0.0.0.0" });
+    console.log(`🚀 RAG Chatbot API listening on http://localhost:${env.PORT}`);
+  } catch (err) {
+    app.log.error(err);
+    process.exit(1);
+  }
 }
 
 main();
